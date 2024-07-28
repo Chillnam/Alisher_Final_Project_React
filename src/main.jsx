@@ -9,7 +9,11 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter
-    basename={import.meta.env.DEV ? "/" : "/Alisher_Final_Project_React/"}
+    basename={
+      process.env.NODE_ENV === "production"
+        ? "/Alisher_Final_Project_React/"
+        : "/"
+    }
   >
     <Provider store={store}>
       <App />
