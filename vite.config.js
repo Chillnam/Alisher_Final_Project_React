@@ -9,16 +9,3 @@ export default defineConfig({
       : "/",
   plugins: [react()],
 });
-
-// export default defineConfig(({ command }) => {
-//   const config = {
-//     plugins: [react()],
-//     base: "/",
-//   };
-
-//   if (command !== "serve") {
-//     config.base = "/Alisher_Final_Project_React/";
-//   }
-
-//   return config;
-// });
