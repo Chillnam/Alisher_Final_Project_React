@@ -8,13 +8,7 @@ import { store } from "./BLL/store.js";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter
-    basename={
-      process.env.NODE_ENV === "production"
-        ? "/Alisher_Final_Project_React/"
-        : "/"
-    }
-  >
+  <BrowserRouter basename={import.meta.env.DEV ? "/" : "/my-vite-react-app/"}>
     <Provider store={store}>
       <App />
     </Provider>
